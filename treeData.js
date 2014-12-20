@@ -151,13 +151,89 @@ var AnimalTree = {
   	  	  "taxon-age": "unknown",
   	  	  "taxon-age-source": "unknown",
   	  	  "children": [
+
   	  	  	{
-  	  	  	  "name": "Spiders",
+  	  	  	  "name": "Spiders (Aranae)",
   	  	  	  "species-diversity": "unknown",
   	  	  	  "species-diversity-source": "unknown",
   	  	  	  "taxon-age": "unknown",
   	  	  	  "taxon-age-source": "unknown",
-  	  	  	  "children": [],
+  	  	  	  "children": [
+                {
+                  "name": "Mesothelae",
+                  "species-diversity": 87,
+                  "species-diversity-source": "http://en.wikipedia.org/wiki/Spider#Taxonomy",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Mygalomorphae",
+                  "species-diversity": 2600,
+                  "species-diversity-source": "unknown",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Araneomorphae",
+                  "species-diversity": 37000,
+                  "species-diversity-source": "http://en.wikipedia.org/wiki/Spider#Taxonomy",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [
+                    {
+                      "name": "Orb-Weaver Spiders (Araneidae)",
+                      "species-diversity": 10000,
+                      "species-diversity-source": "http://en.wikipedia.org/wiki/Orb-weaver_spider",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Cobweb Spiders (Theridiidae)",
+                      "species-diversity": 2200,
+                      "species-diversity-source": "http://en.wikipedia.org/wiki/Theridiidae",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Crab Spiders (Thomisidae)",
+                      "species-diversity": "unknown",
+                      "species-diversity-source": "unknown",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Jumping Spiders (Salticidae)",
+                      "species-diversity": 5000,
+                      "species-diversity-source": "http://en.wikipedia.org/wiki/Jumping_spider",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Wolf Spiders (Lycosidae)",
+                      "species-diversity": "unknown",
+                      "species-diversity-source": "unknown",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Huntsman Spiders (Sparassidae)",
+                      "species-diversity": "unknown",
+                      "species-diversity-source": "unknown",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    }
+                  ],
+                }
+
+              ],
   	  	  	},
   	  	  	{
   	  	  	  "name": "Insects",
@@ -168,12 +244,85 @@ var AnimalTree = {
   	  	  	  "children": [],
   	  	  	},
   	  	  	{
-  	  	  	  "name": "Crustaceans",
-  	  	  	  "species-diversity": "unknown",
-  	  	  	  "species-diversity-source": "unknown",
+  	  	  	  "name": "Crustacea",
+  	  	  	  "species-diversity": 67000,
+  	  	  	  "species-diversity-source": "http://en.wikipedia.org/wiki/Crustacean",
   	  	  	  "taxon-age": "unknown",
   	  	  	  "taxon-age-source": "unknown",
-  	  	  	  "children": [],
+  	  	  	  "children": [
+                {
+                  "name": "Branchiopoda",
+                  "species-diversity": "unknown",
+                  "species-diversity-source": "unknown",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Remipedia",
+                  "species-diversity": "unknown",
+                  "species-diversity-source": "unknown",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Cephalocarida",
+                  "species-diversity": "unknown",
+                  "species-diversity-source": "unknown",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Maxillopoda",
+                  "species-diversity": "unknown",
+                  "species-diversity-source": "unknown",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [
+                    {
+                      "name": "Barnacles",
+                      "species-diversity": 1220,
+                      "species-diversity-source": "http://en.wikipedia.org/wiki/Barnacle",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Copepods",
+                      "species-diversity": 13000,
+                      "species-diversity-source": "http://en.wikipedia.org/wiki/Copepod",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    }
+                  ],
+                },
+                {
+                  "name": "Ostracoda",
+                  "species-diversity": 70000,
+                  "species-diversity-source": "http://en.wikipedia.org/wiki/Ostracod",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [],
+                },
+                {
+                  "name": "Malacostraca",
+                  "species-diversity": 40000,
+                  "species-diversity-source": "http://en.wikipedia.org/wiki/Malacostraca",
+                  "taxon-age": "unknown",
+                  "taxon-age-source": "unknown",
+                  "children": [
+
+
+                  ],
+                }
+
+
+
+
+              ],
   	  	  	}
 
 
@@ -297,52 +446,37 @@ var AnimalTree = {
                                   "taxon-age-source": "unknown",
                                   "children": [
                                     {
-                                      "name": "Apes",
+                                      "name": "Orangutans",
                                       "species-diversity": "unknown",
                                       "species-diversity-source": "unknown",
                                       "taxon-age": "unknown",
                                       "taxon-age-source": "unknown",
-                                      "children": [
-                                        {
-                                          "name": "Orangutans",
-                                          "species-diversity": "unknown",
-                                          "species-diversity-source": "unknown",
-                                          "taxon-age": "unknown",
-                                          "taxon-age-source": "unknown",
-                                          "children": [],
-                                        },
-                                        {
-                                          "name": "Chimps",
-                                          "species-diversity": "unknown",
-                                          "species-diversity-source": "unknown",
-                                          "taxon-age": "unknown",
-                                          "taxon-age-source": "unknown",
-                                          "children": [],
-                                        },
-                                        {
-                                          "name": "Gorillas",
-                                          "species-diversity": "unknown",
-                                          "species-diversity-source": "unknown",
-                                          "taxon-age": "unknown",
-                                          "taxon-age-source": "unknown",
-                                          "children": [],
-                                        },
-                                        {
-                                          "name": "Humans",
-                                          "species-diversity": "unknown",
-                                          "species-diversity-source": "unknown",
-                                          "taxon-age": "unknown",
-                                          "taxon-age-source": "unknown",
-                                          "children": [],
-                                        }
-
-
-
-
-
-                                      ],
+                                      "children": [],
+                                    },
+                                    {
+                                      "name": "Chimps",
+                                      "species-diversity": "unknown",
+                                      "species-diversity-source": "unknown",
+                                      "taxon-age": "unknown",
+                                      "taxon-age-source": "unknown",
+                                      "children": [],
+                                    },
+                                    {
+                                      "name": "Gorillas",
+                                      "species-diversity": "unknown",
+                                      "species-diversity-source": "unknown",
+                                      "taxon-age": "unknown",
+                                      "taxon-age-source": "unknown",
+                                      "children": [],
+                                    },
+                                    {
+                                      "name": "Humans",
+                                      "species-diversity": "unknown",
+                                      "species-diversity-source": "unknown",
+                                      "taxon-age": "unknown",
+                                      "taxon-age-source": "unknown",
+                                      "children": [],
                                     }
-
                                   ],
                                 },
                                 {

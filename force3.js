@@ -47,11 +47,6 @@ var link = canvas.selectAll(".link")
 
 
 
-
-
-
-
-
 var node = canvas.selectAll(".node")
   .data(nodes).enter().append("g")
   .attr("transform", function (d) {

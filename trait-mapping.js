@@ -43,13 +43,17 @@ var DiscreteTraitDistribution = (function  (){
 
 DiscreteTraitDistribution.setTree(AnimalTree)
 
-DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, ['Vertebrates', 'Arthropods', 'Molluscs'])
 
 OriginHypotheses = {
-  humans: ['humans'],
-  bigThree: ['Vertebrates', 'Arthropods', 'Molluscs']
-
+  humans: ['Humans'],
+  greatApes: ['Hominidae'],
+  mammals: ['Mammals'],
+  bigThree: ['Vertebrates', 'Arthropods', 'Molluscs'],
+  bilateria: ['Bilateria']
 
 }
 
-console.log( DiscreteTraitDistribution.outputTree() )
+
+DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bigThree)
+
+// console.log( DiscreteTraitDistribution.outputTree() )
