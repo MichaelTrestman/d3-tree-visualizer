@@ -5,10 +5,14 @@ html {
 body {
   height: 150%;
   width: 150%;
+  background-color: rgba(10, 150, 200, 0.2);
+  /*background: -webkit-radial-gradient( 0% 0%, blue, yellow);*/
 
-  /*background: -webkit-radial-gradient( 200% 000%, blue, black);*/
-
-  background-size: 2000 2000;
+  background-size: 2000px, 2000px;
+  background-position: left;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 20%;
 
 }
 .fixedPos {
@@ -87,6 +91,9 @@ background-color: white;
   border-radius: 40%;
 
 }
+.popout {
+  z-index: 10;
+}
 
 
 .node {
@@ -98,7 +105,7 @@ background-color: white;
 }
 
 }
-/*.node:hover {
+/*.node:hover circle {
 	color: rgba(200, 50, 200, 1.0 );
   fill: rgba(10, 10, 10, 0.9);
 }
@@ -125,7 +132,7 @@ background-image: url('http://clippingfile.com/wp-content/uploads/2010/10/CF-bac
 }
 #forceBackground {
 
-background-color:
+background-color: 'blue'
 
 }
 .sideBar {

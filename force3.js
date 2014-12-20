@@ -56,6 +56,7 @@ var node = canvas.selectAll(".node")
 var textitos = node.append('text').text(function(d){return d.name})
   .attr("font-family", "sans-serif")
   .attr("font-size", "15px")
+  .attr('class', 'popout')
   .style("fill", "black")
   .attr('x', '1000').attr('y', '1000')
 
@@ -149,58 +150,97 @@ var circulos = node.append('circle')
 
 var colors = {
   baseline: "rgba(10, 100, 10, 0.3)",
-  // hover: "rgba(10, 10, 10, 0.7",
+  active: "rgba(201, 181, 59, 0.2)",
   conscious: "rgba(100, 10, 10, 0.4)"
 }
 
 
-circulos.style('fill', function(d){
-  var thisColor = colors.baseline
-  console.log( Object.keys(colors) )
 
-  Object.keys(colors).forEach(function(category){
+function styleDat(){
+  circulos.style('fill', function(d){
+    var thisColor = colors.baseline
 
-      console.log(!!d[category]   )
+    Object.keys(colors).forEach(function(category){
 
-    if (!!d[category]){
+      if (!!d[category]){
 
-      thisColor = colors[category]
-    }
-  })
-
-
-  return thisColor
-
-
-});
-
-// node.style('stroke', 'white')
-link.style('stroke', 'black')
-
-node
-  .on("mouseover", function(d){
-      d3.select(this).style(colors.hover)
-      if (d.children) {
-      } else { console.log(0)};
-    // tooltip.text(d.name);
-    // tooltip.style("visibility", "visible");
-  })
-  // .on("mousemove", function(){
-  //   tooltip.style("top",
-  //   (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-  // })
-
-  .on("mouseout", function(){
-    d3.select(this).style('fill', function(d){
-      Object.keys(colors).forEach(function(category){
-        if (colors.category){
-          return colors.category;
-        } else {
-          return colors.baseline;
-        }
-      })
+        thisColor = colors[category]
+      }
     })
-    // tooltip.style("visibility", "hidden");
+
+    return thisColor
+
+
   });
 
+  // node.style('stroke', 'white')
+  link.style('stroke', 'black')
 
+  circulos
+    .on("mouseover", function(d){
+      console.log(this)
+
+        d3.select(this).style('fill', colors.active)
+
+      // tooltip.text(d.name);
+      // tooltip.style("visibility", "visible");
+    })
+    // .on("mousemove", function(){
+    //   tooltip.style("top",
+    //   (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
+    // })
+
+    .on("mouseout", function(){
+      console.log(this)
+      d3.select(this).style('fill', function(d){
+        var thisColor = colors.baseline
+
+        Object.keys(colors).forEach(function(category){
+
+          if (!!d[category]){
+
+            thisColor = colors[category]
+          }
+        })
+
+        return thisColor
+
+
+      });
+      // tooltip.style("visibility", "hidden");
+    });
+
+
+}
+styleDat();
+
+setInterval(function(){
+
+  setTimeout(function(){
+    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.humans)
+    styleDat();
+
+  }, 1000)
+
+  setTimeout(function(){
+    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.mammals)
+    styleDat();
+
+  }, 2000)
+  setTimeout(function(){
+    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bigThree)
+    styleDat();
+
+  }, 3000)
+  setTimeout(function(){
+    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bilateria)
+    styleDat();
+
+  }, 4000)
+  setTimeout(function(){
+    DiscreteTraitDistribution.mapTraits({"conscious": null}, ['Animals'])
+    styleDat();
+
+  }, 5000)
+
+}, 5000)

@@ -8,18 +8,20 @@ var DiscreteTraitDistribution = (function  (){
     Object.keys(traits).forEach(function(trait){
       node[trait] = traits[trait]
     });
-
-    node.children.forEach(function(child){
-      recursivelyMapTraitsToClade(traits, child)
-    })
-
+    if(node.children) {
+      node.children.forEach(function(child){
+        recursivelyMapTraitsToClade(traits, child)
+      })
+    }
   }
   var recursivelySearchForOriginTaxaToMapFrom = function(node, originTaxa, traits){
     if (originTaxa.some(function(taxon){ return taxon === node.name }) ){
       recursivelyMapTraitsToClade(traits, node)
-    } else {
-      node.children.forEach(function(child){recursivelySearchForOriginTaxaToMapFrom(child, originTaxa, traits)
-      })
+    } else if (node.children){
+      if(node.children) {
+        node.children.forEach(function(child){recursivelySearchForOriginTaxaToMapFrom(child, originTaxa, traits)
+        })
+      }
     }
   }
 
@@ -54,6 +56,6 @@ OriginHypotheses = {
 }
 
 
-DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bigThree)
+DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.humans)
 
 // console.log( DiscreteTraitDistribution.outputTree() )
