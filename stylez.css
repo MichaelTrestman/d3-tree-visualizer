@@ -1,0 +1,123 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+
+  /*background: -webkit-radial-gradient( 200% 000%, blue, black);*/
+
+  background-size: 2000 2000;
+
+}
+.svg-canvas {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 15%;
+  border: solid 1px black;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid 2px black;
+}
+.wrapper {
+  background-color: rgba(220, 160, 00, .8);
+  padding: 0px;
+  border: solid 5px black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.texticles{
+
+  font-size: 50px;
+  background-color: red;
+
+}
+
+.heading {
+/*max-height: 5%;*/
+
+  background: -webkit-radial-gradient( 100% 000%, black, blue);
+  /*padding: 0px;*/
+  font-size: 1.5em;
+  /*font-weight: 1000;*/
+  /*width: 100%;*/
+  text-align: center;
+  color: white;
+  font: sans-serif;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+
+}
+
+.nav li {
+background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 40%;
+
+}
+
+
+.node {
+  cursor: pointer;
+  /*stroke: #3182bd;*/
+  stroke-width: 1.5px;
+
+  text-align: center;
+}
+
+}
+/*.node:hover {
+	color: rgba(200, 50, 200, 1.0 );
+  fill: rgba(10, 10, 10, 0.9);
+}
+*/
+
+/*.node {
+  fill: rgba(10, 10, 10, 0.2);
+  stroke: white;
+}
+*/
+.link {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+#treeBackground {
+
+background-image: url('http://clippingfile.com/wp-content/uploads/2010/10/CF-background-31.jpg');
+}
+#packingBackground {
+          background-image: url("http://www.dailydesktop.eu/data/media/18/Nanotubes.jpg ");
+
+/*background-image: url('http://clippingfile.com/wp-content/uploads/2010/10/CF-background-31.jpg');*/
+}
+#forceBackground {
+
+background-color:
+
+}
+.sideBar {
+  background-color: black;
+  border: solid 2px white;
+  color: white;
+  width: 20%;
+
+}
