@@ -1,12 +1,7 @@
 
-var colors = {
-      baseline: "rgba(10, 10, 10, 0.3)",
-      hover: "rgba(10, 10, 10, 0.7",
-      highlight: "rgba(100, 10, 10, 0.4)"
-    }
 
-var width = 600,
-    height = 600,
+var width = 6000,
+    height = 2200,
 
 canvas = d3.select('body').append('svg')
       .attr('class', 'svg-canvas');
@@ -114,7 +109,6 @@ var circulos = node.append('circle')
 
 
 
-
     });
 
     // var scaleColor = d3.scale.linear()
@@ -148,39 +142,70 @@ var circulos = node.append('circle')
 
 
 
-    node
-      .on("mouseover", function(d){
-          d3.select(this).style(colors.hover)
-          i
 
-          f (d.children) {
-          } else { console.log(0)};
-        // tooltip.text(d.name);
-        // tooltip.style("visibility", "visible");
+
+
+
+
+
+//COLOR STUFF; refactor into module
+
+
+
+var colors = {
+  baseline: "rgba(10, 100, 10, 0.3)",
+  // hover: "rgba(10, 10, 10, 0.7",
+  conscious: "rgba(100, 10, 10, 0.4)"
+}
+
+
+circulos.style('fill', function(d){
+  var thisColor = colors.baseline
+  console.log( Object.keys(colors) )
+
+  Object.keys(colors).forEach(function(category){
+
+      console.log(!!d[category]   )
+
+    if (!!d[category]){
+
+      thisColor = colors[category]
+    }
+  })
+
+
+  return thisColor
+
+
+});
+
+// node.style('stroke', 'white')
+link.style('stroke', 'black')
+
+node
+  .on("mouseover", function(d){
+      d3.select(this).style(colors.hover)
+      if (d.children) {
+      } else { console.log(0)};
+    // tooltip.text(d.name);
+    // tooltip.style("visibility", "visible");
+  })
+  // .on("mousemove", function(){
+  //   tooltip.style("top",
+  //   (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
+  // })
+
+  .on("mouseout", function(){
+    d3.select(this).style('fill', function(d){
+      Object.keys(colors).forEach(function(category){
+        if (colors.category){
+          return colors.category;
+        } else {
+          return colors.baseline;
+        }
       })
-      .on("mousemove", function(){
-        tooltip.style("top",
-        (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");
-      })
+    })
+    // tooltip.style("visibility", "hidden");
+  });
 
-      .on("mouseout", function(){
-        d3.select(this).style('fill', function(d){
-          if (d.gassy === "dolphinately"){
-            return colors.highlight;
-          } else {
-            return colors.baseline;
-          }
-        })
-        // tooltip.style("visibility", "hidden");
-      });
-
-    node.style('fill', function(d){
-            if (d.gassy === "dolphinately"){
-              return colors.highlight;
-            } else {
-              return colors.baseline;
-            }
-          });
-    // node.style('stroke', 'white')
-    link.style('stroke', 'black')
 

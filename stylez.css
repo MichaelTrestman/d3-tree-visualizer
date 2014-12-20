@@ -12,11 +12,11 @@ body {
 
 }
 .svg-canvas {
-  position: fixed;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  top: 15%;
+  /*position: fixed;*/
+  width: 150%;
+  height: 150%;
+  left: 5%;
+  top: 5%;
   border: solid 1px black;
 }
 

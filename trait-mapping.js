@@ -5,10 +5,8 @@ var DiscreteTraitDistribution = (function  (){
   var _tree = null;
 
   var recursivelyMapTraitsToClade = function(traits, node){
-    console.log('yeah buddy')
     Object.keys(traits).forEach(function(trait){
       node[trait] = traits[trait]
-      console.log('set ' + node[trait] + "equal to" + traits[trait])
     });
 
     node.children.forEach(function(child){
@@ -45,6 +43,13 @@ var DiscreteTraitDistribution = (function  (){
 
 DiscreteTraitDistribution.setTree(AnimalTree)
 
-DiscreteTraitDistribution.mapTraits({gassy: 'dolphinately'}, ['Vertebrates'])
+DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, ['Vertebrates', 'Arthropods', 'Molluscs'])
+
+OriginHypotheses = {
+  humans: ['humans'],
+  bigThree: ['Vertebrates', 'Arthropods', 'Molluscs']
+
+
+}
 
 console.log( DiscreteTraitDistribution.outputTree() )
