@@ -38,64 +38,6 @@ body {
   border: solid 1px black;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: solid 2px black;
-}
-.wrapper {
-  background-color: rgba(220, 160, 00, .8);
-  padding: 0px;
-  border: solid 5px black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-.texticles{
-
-  font-size: 50px;
-  background-color: red;
-
-}
-
-.heading {
-/*max-height: 5%;*/
-
-  background: -webkit-radial-gradient( 100% 000%, black, blue);
-  /*padding: 0px;*/
-  font-size: 1.5em;
-  /*font-weight: 1000;*/
-  /*width: 100%;*/
-  text-align: center;
-  color: white;
-  font: sans-serif;
-
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  list-style: none;
-
-}
-
-.nav li {
-background-color: white;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 40%;
-
-}
-.popout {
-  z-index: 10;
-}
-
-
 .node {
   cursor: pointer;
   /*stroke: #3182bd;*/
@@ -104,41 +46,31 @@ background-color: white;
   text-align: center;
 }
 
-}
-/*.node:hover circle {
-	color: rgba(200, 50, 200, 1.0 );
-  fill: rgba(10, 10, 10, 0.9);
-}
-*/
-
-/*.node {
-  fill: rgba(10, 10, 10, 0.2);
-  stroke: white;
-}
-*/
 .link {
   fill: none;
   stroke: black;
   stroke-width: 1.5px;
 }
-#treeBackground {
 
-background-image: url('http://clippingfile.com/wp-content/uploads/2010/10/CF-background-31.jpg');
-}
-#packingBackground {
-          background-image: url("http://www.dailydesktop.eu/data/media/18/Nanotubes.jpg ");
+.sidebar {
 
-/*background-image: url('http://clippingfile.com/wp-content/uploads/2010/10/CF-background-31.jpg');*/
-}
-#forceBackground {
-
-background-color: 'blue'
-
-}
-.sideBar {
-  background-color: black;
-  border: solid 2px white;
+  position: fixed;
+  background-color: rgba(10, 10, 10, 0.2);
   color: white;
   width: 20%;
+  left: 0%;
+  top: 20%;
+  height: 60%;
+  width: 15%;
 
+}
+.sidebar ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul li {
+  text-align: center;
+  list-style: none;
+  flex: 1;
 }

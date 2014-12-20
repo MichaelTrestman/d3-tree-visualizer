@@ -178,7 +178,6 @@ function styleDat(){
 
   circulos
     .on("mouseover", function(d){
-      console.log(this)
 
         d3.select(this).style('fill', colors.active)
 
@@ -191,7 +190,6 @@ function styleDat(){
     // })
 
     .on("mouseout", function(){
-      console.log(this)
       d3.select(this).style('fill', function(d){
         var thisColor = colors.baseline
 
@@ -214,33 +212,33 @@ function styleDat(){
 }
 styleDat();
 
-setInterval(function(){
+// setInterval(function(){
 
-  setTimeout(function(){
-    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.humans)
-    styleDat();
+//   setTimeout(function(){
+//     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.humans)
+//     styleDat();
 
-  }, 1000)
+//   }, 1000)
 
-  setTimeout(function(){
-    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.mammals)
-    styleDat();
+//   setTimeout(function(){
+//     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.mammals)
+//     styleDat();
 
-  }, 2000)
-  setTimeout(function(){
-    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bigThree)
-    styleDat();
+//   }, 2000)
+//   setTimeout(function(){
+//     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bigThree)
+//     styleDat();
 
-  }, 3000)
-  setTimeout(function(){
-    DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bilateria)
-    styleDat();
+//   }, 3000)
+//   setTimeout(function(){
+//     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.bilateria)
+//     styleDat();
 
-  }, 4000)
-  setTimeout(function(){
-    DiscreteTraitDistribution.mapTraits({"conscious": null}, ['Animals'])
-    styleDat();
+//   }, 4000)
+//   setTimeout(function(){
+//     DiscreteTraitDistribution.mapTraits({"conscious": null}, ['Animals'])
+//     styleDat();
 
-  }, 5000)
+//   }, 5000)
 
-}, 5000)
+// }, 5000)

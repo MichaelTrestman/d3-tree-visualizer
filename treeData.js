@@ -108,11 +108,33 @@ var AnimalTree = {
         },
         {
           "name": "Echinodermata",
-          "species-diversity": "unknown",
-          "species-diversity-source": "unknown",
+          "species-diversity": 7000,
+          "species-diversity-source": "http://en.wikipedia.org/wiki/Echinoderm#Taxonomy_and_evolution",
           "taxon-age": "unknown",
           "taxon-age-source": "unknown",
-          "children": [],
+          "children": [
+
+            {
+              "name": "Starfish (Asteroidea)",
+              "species-diversity": 1500,
+              "species-diversity-source": "http://en.wikipedia.org/wiki/Starfish",
+              "taxon-age": "unknown",
+              "taxon-age-source": "unknown",
+            "children": [],
+            },
+
+            {
+              "name": "Crinoidea",
+              "species-diversity": 600,
+              "species-diversity-source": "http://en.wikipedia.org/wiki/Crinoid",
+              "taxon-age": "unknown",
+              "taxon-age-source": "unknown",
+              "children": [],
+            }
+
+
+
+          ],
         },
 
         {

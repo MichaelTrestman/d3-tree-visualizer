@@ -50,8 +50,9 @@ OriginHypotheses = {
   humans: ['Humans'],
   greatApes: ['Hominidae'],
   mammals: ['Mammals'],
+  amniotes: ['Amniotes'],
   bigThree: ['Vertebrates', 'Arthropods', 'Molluscs'],
-  bilateria: ['Bilateria']
+  animals: ['Animals']
 
 }
 
