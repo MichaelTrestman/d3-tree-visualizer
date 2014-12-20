@@ -63,7 +63,8 @@ var textitos = node.append('text').text(function(d){return d.name})
 
 var circulos = node.append('circle')
   .attr("class", "node")
-  .attr("r", function(d){ return d.size})
+  .attr('r', function(d){ return d.size})
+  // .attr("r", function(d){ console.log(d); if ( d['species-diversity'] != "unknown") { return d['species-diversity']/1000  } else { return 5 } ;  })
   .attr('cx', function(d){ return d.x }).attr('cy', function(d){return d.y })
   .call(force.drag);
 

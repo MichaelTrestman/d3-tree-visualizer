@@ -38,12 +38,30 @@ body {
   border: solid 1px black;
 }
 
+.info-panel {
+  position: fixed;
+  width: 15%;
+  left: 85%;
+  top: 20%;
+  height: 65%;
+  background-color: rgba(10, 10, 10, 0.3);
+
+}
 .node {
   cursor: pointer;
-  /*stroke: #3182bd;*/
+  stroke: #3182bd;
   stroke-width: 1.5px;
 
   text-align: center;
+}
+
+button {
+  background-color: rgba( 200, 200, 200, 0.4);
+  color: white;
+}
+button:hover {
+  box-shadow: 0px 0px 30px red;
+  /*background-color: black;*/
 }
 
 .link {
@@ -60,7 +78,7 @@ body {
   width: 20%;
   left: 0%;
   top: 20%;
-  height: 60%;
+  /*height: 60%;*/
   width: 15%;
 
 }
@@ -68,9 +86,9 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  /*text-align: center;*/
 }
 .sidebar ul li {
-  text-align: center;
   list-style: none;
   flex: 1;
 }
