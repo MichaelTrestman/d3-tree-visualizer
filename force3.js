@@ -1,4 +1,4 @@
-
+var WorkingTree = AnimalTree
 
 var width = 6000,
     height = 2200,
@@ -15,7 +15,7 @@ height = $('svg').height()
 
 var tree = d3.layout.tree();
 
-var nodes = tree(AnimalTree);
+var nodes = tree(WorkingTree);
 
 var links = tree.links(nodes)
 
@@ -64,19 +64,8 @@ var textitos = node.append('text').text(function(d){return d.name})
 var circulos = node.append('circle')
   .attr("class", "node")
   .attr('r', function(d){ return d.size})
-  // .attr("r", function(d){ console.log(d); if ( d['species-diversity'] != "unknown") { return d['species-diversity']/1000  } else { return 5 } ;  })
   .attr('cx', function(d){ return d.x }).attr('cy', function(d){return d.y })
   .call(force.drag);
-
-// canvas.selectAll(".node")
-//   .data(nodes).up.append('text').text(function (d) { return "shit" })
-//   .style('fill', 'red')
-//   .attr('x', function (d) {
-//     return d.cx
-//   })
-//   .attr('y', function (d) {
-//     return d.cy
-//   })
 
     force.on("tick", function() {
       // link.attr("x1", function(d) { return d.source.x; })
@@ -113,17 +102,6 @@ var circulos = node.append('circle')
     //                  .range( ["white", "black"]);
 
 
-    var scaleColor = d3.scale.linear()
-                    .domain (
-                      [0, 30
-                        // d3.max (nodes, function(d) {
-                        //  if (d.children){ return d.children.length} else {return 0};
-                        // } )
-
-                      ])
-
-                    .range ("green", "purple");
-
 
 
 
@@ -150,9 +128,10 @@ var circulos = node.append('circle')
 
 
 var colors = {
-  baseline: "rgba(10, 100, 10, 0.3)",
-  active: "rgba(201, 181, 59, 0.2)",
-  conscious: "rgba(100, 10, 10, 0.4)"
+  baseline: "rgba(10, 100, 10, 0.4)",
+  conscious: "rgba(201, 181, 59, 0.4)",
+  active: "rgba(200, 10, 40, 0.4)",
+  flying: "rgba(22, 50, 200, 0.4)"
 }
 
 
