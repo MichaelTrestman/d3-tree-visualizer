@@ -56,7 +56,3 @@ OriginHypotheses = {
 
 }
 
-
-DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses.humans)
-
-// console.log( DiscreteTraitDistribution.outputTree() )
