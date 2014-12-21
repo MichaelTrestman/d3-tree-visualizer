@@ -4,6 +4,13 @@
   //   console.log('yo: ' + origHyp)
   //   styleDat();
 
+// DiscreteTraitDistribution.mapTraits(
+//   {
+//     'flying': 'like a (flying) fox'
+//   },
+//   ['Birds', 'Insects', 'Bats', 'Pterosaurs']
+// )
+// styleDat();
 
 
 Object.keys(OriginHypotheses).forEach(function(origHyp){
@@ -11,7 +18,7 @@ Object.keys(OriginHypotheses).forEach(function(origHyp){
   $("#" + origHyp).click(function(){
     DiscreteTraitDistribution.mapTraits({"conscious": null}, ['Animals'])
     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses[origHyp])
-    console.log('yo: ' + origHyp)
+
     styleDat();
 
   })
