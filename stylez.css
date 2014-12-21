@@ -28,7 +28,9 @@ body {
   text-align: center;
   color: white;
 }
-
+body {
+  font-family: 'Stoke', serif;
+}
 .svg-canvas {
   /*position: fixed;*/
   width: 150%;
@@ -45,8 +47,10 @@ body {
   top: 20%;
   height: 65%;
   background-color: rgba(10, 10, 10, 0.3);
+  color: white;
 
 }
+
 .node {
   cursor: pointer;
   stroke: #3182bd;
@@ -55,12 +59,16 @@ body {
   text-align: center;
 }
 
-button {
-  background-color: rgba( 200, 200, 200, 0.4);
+.button {
+  /*background-color: rgba( 200, 200, 200, 0.4);*/
   color: white;
+  padding: 5%;
+  margin-right: 40%;
+  border-radius: 50%;
+  text-align: center;
 }
-button:hover {
-  box-shadow: 0px 0px 30px red;
+.button:hover {
+  box-shadow: 0px 0px 60px white;
   /*background-color: black;*/
 }
 
@@ -73,7 +81,7 @@ button:hover {
 .sidebar {
 
   position: fixed;
-  background-color: rgba(10, 10, 10, 0.2);
+  background-color: rgba(10, 10, 10, 0.3);
   color: white;
   width: 20%;
   left: 0%;
@@ -82,6 +90,7 @@ button:hover {
   width: 15%;
 
 }
+
 .sidebar ul {
   height: 100%;
   display: flex;
