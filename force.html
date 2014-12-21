@@ -4,6 +4,7 @@
 <head>
 	<title> Trees with D3</title>
 <link rel="stylesheet" type="text/css" href="stylez.css">
+<link href='http://fonts.googleapis.com/css?family=Stoke:400,300' rel='stylesheet' type='text/css'>
 
 
 	<script type="text/javascript" src = 'jquery-1.11.1.min.js'></script>
@@ -20,12 +21,12 @@
 
 		<p>Click to highlight a group of animals.<br> The following are the groups proposed by various scientists to be exclusively conscious:</p>
 		<ul>
-				<li><button id='humans'>Humans</button></li>
-				<li><button id='greatApes'>Apes</button></li>
-				<li><button id='mammals'>Mammals</button></li>
-				<li><button id='amniotes'>Amniotes</button></li>
-				<li><button id='bigThree'>Big-Three</button></li>
-				<li><button id='animals'>Animals</button></li>
+				<li><div class='button' id='humans'>Humans</div></li>
+				<li><div class='button' id='greatApes'>Apes</div></li>
+				<li><div class='button' id='mammals'>Mammals</div></li>
+				<li><div class='button' id='amniotes'>Amniotes</div></li>
+				<li><div class='button' id='bigThree'>Big-Three</div></li>
+				<li><div class='button' id='animals'>Animals</div></li>
 		</ul>
 
 	</div>
@@ -35,10 +36,14 @@
 	</script>
 
 	<script src="trait-mapping.js"></script>
-<script src="force3.js"></script>
+
+	<script src="force3.js"></script>
+
 	<!-- // <script src="bubble.js"></script> -->
 
 <script type="text/javascript" src="trait-map-switcher.js"></script>
+<script type="text/javascript" src="node-display-delete-or-add.js"></script>
+
 
 
 </body>
