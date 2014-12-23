@@ -15,12 +15,10 @@
 
 Object.keys(OriginHypotheses).forEach(function(origHyp){
 
-  $("#" + origHyp).click(function(){
+  $("#" + origHyp).on('mouseenter', function(){
     DiscreteTraitDistribution.mapTraits({"conscious": null}, ['Animals'])
     DiscreteTraitDistribution.mapTraits({"conscious": 'dolphinately'}, OriginHypotheses[origHyp])
-
     styleDat();
-
   })
 
 })

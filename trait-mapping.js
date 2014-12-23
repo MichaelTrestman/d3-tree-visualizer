@@ -56,3 +56,35 @@ OriginHypotheses = {
 
 }
 
+
+
+// var recursivelySeekAndDestroyNode = function(node, targetNodeName){
+
+//   if(node.name == targetNodeName) {
+//     console.log('target found!')
+//     console.log(node.name)
+//     return {};
+//   } else if (node.children && (node.children.length > 0 ) )  {
+//     console.log('not this one!')
+//     console.log(node.name)
+//     node.children.forEach(function(child){
+//       child = recursivelySeekAndDestroyNode(child, targetNodeName);
+//     })
+//   }
+//   console.log('my children:')
+//   console.log(node.name)
+//   console.log(node.children)
+//   return node
+// }
+
+
+var recursivelySeekAndDestroyNode = function(startingNode, targetNodeName){
+  if (startingNode.children) {
+    startingNode.children.forEach(function(child, index){
+      child.name == targetNodeName ? startingNode.children.splice(index, 1) : recursivelySeekAndDestroyNode(child, targetNodeName);
+    })
+  };
+}
+
+
+
