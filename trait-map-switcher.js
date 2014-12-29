@@ -27,7 +27,7 @@ Object.keys(OriginHypotheses).forEach(function(origHyp){
 //display shit on info panel
 
 var infoPanelInitialize = (function(){
-  $('.node').click(function(d){
+  $('.node').on('mouseenter', function(d){
     clade = d.target.__data__
     var panel = $('.info-panel')
     var url;

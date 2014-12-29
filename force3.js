@@ -7,8 +7,8 @@ var colors = {
   flying: "rgba(22, 50, 200, 0.4)"
 }
 
-var width = 6000,
-    height = 2200,
+var width = 1800,
+    height = 1200,
 
 canvas = d3.select('body').append('svg')
       .attr('class', 'svg-canvas');
@@ -25,7 +25,7 @@ var force = d3.layout.force()
   .charge(function(d){ return -d.charge})
   .gravity(0.2)
   .linkDistance(40)
-  .size([width, height]);
+  .size([width/2, height/2 + 50]);
 var nodes, links, link, node, textitos, circulos;
 
 nodes = tree(WorkingTree);
@@ -58,32 +58,32 @@ var positionLinks = function(){
 // link = canvas.selectAll(".link")
 //   .data(links);
 
-
-var renderTree = function(){
-
   nodes = tree(WorkingTree);
   links = tree.links(nodes);
+
+var setNodesAndLinks = function(){
 
   node = canvas.selectAll(".nodesicle")
     .data(nodes);
 
   link = canvas.selectAll(".link")
     .data(links);
-
-  // node.data(nodes);
-  // // console.log(nodes)
-  // link.data(links);
+}
 
 
+var renderTree = function(){
+  setNodesAndLinks();
+
+  // canvas.selectAll(".nodesicle")
+    // .data(nodes).exit().remove();
   node.exit().remove();
-
   link.exit().remove();
 
-  d3.selectAll('g').remove();
-  d3.selectAll('.node').remove();
-  d3.selectAll('path').remove();
-  d3.selectAll('.textito').remove();
-  d3.selectAll('.nodesicle').remove();
+  // d3.selectAll('g').remove();
+  // d3.selectAll('.node').remove();
+  // d3.selectAll('path').remove();
+  // d3.selectAll('.textito').remove();
+  // d3.selectAll('.nodesicle').remove();
 
 
   link
@@ -132,16 +132,17 @@ force
   .start();
 
 renderTree();
+
 var mdk = function(){
   recursivelySeekAndDestroyNode(WorkingTree, 'Bilateria');
 }
 
 $('.header').click(function(){
 
-  force
-    .nodes(nodes)
-    .links(links)
-    .start();
+  // force
+  //   .nodes(nodes)
+  //   .links(links)
+  //   .start();
   renderTree();
 
 
@@ -194,13 +195,12 @@ $('.header').click(function(){
 
 function styleDat(){
   link.style('stroke', 'black')
+
   circulos.style('fill', function(d){
     var thisColor = colors.baseline
 
     Object.keys(colors).forEach(function(category){
-
       if (!!d[category]){
-
         thisColor = colors[category]
       }
     })
@@ -244,6 +244,7 @@ function styleDat(){
     });
 
 };
+
 styleDat();
 
 //timed alternation of displays
